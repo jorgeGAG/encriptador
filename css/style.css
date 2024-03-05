@@ -1,0 +1,184 @@
+:root {
+  --color-blue: #0a3871;
+  --color-gris: #d8dfe8;
+  --color-gray: #495057;
+}
+
+body {
+  background-color: #f3f5fc;
+  font-family: "Inter", sans-serif;
+}
+
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+}
+.header__logo {
+  margin-top: 40px;
+}
+
+/*Main*/
+
+.main {
+  width: 80.5%;
+  margin: auto 40px auto auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: calc(100vh - 91px - 72px);
+  align-items: end;
+}
+.left {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ingreo_texto {
+  width: 80%;
+  font-size: 32px;
+  color: var(--color-blue);
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+}
+.ingreo_texto::placeholder {
+  color: var(--color-blue);
+}
+.left_pie {
+  background-color: aliceblue;
+}
+
+.left_info {
+  color: var(--color-gray);
+  font-size: 12px;
+}
+
+.left_botones {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn_incriptar,
+.btn_desincriptar,
+.btn_copiar {
+  border: 1px solid var(--color-blue);
+  cursor: pointer;
+  max-width: 328px;
+  width: 40%;
+  height: 67px;
+  font-size: 16px;
+  border-radius: 24px;
+}
+
+.btn_incriptar {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.btn_desincriptar {
+  background-color: var(--color-gris);
+  color: var(--color-blue);
+}
+
+.btn_copiar {
+  background-color: transparent;
+  width: 100%;
+  color: var(--color-blue);
+  display: none;
+}
+
+
+.right {
+  background-color: rgb(255, 255, 255);
+  height: calc(100% + 48px);
+  border-radius: 32px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.right.ajustar {
+  justify-content: space-between;
+}
+
+.muneco {
+  width: 100%;
+}
+
+.oculto {
+  display: none;
+}
+
+.mensaje_final {
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  
+}
+.mensaje_final::placeholder {
+    color: #343a40;
+  }
+
+.mensaje_final.ajustar {
+  height: 80%;
+  text-align: left;
+  font-weight: 400;
+}
+
+.mensaje_inicial {
+  font-size: 16px;
+  color: var(--color-gray);
+  text-align: center;
+}
+/* 
+footer {
+    background-color: rgb(255, 0, 0);
+} */
+
+@media screen and (max-width: 800px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% auto;
+    width: auto;
+    margin: auto 40px;
+  }
+  .right {
+    height: 100%;
+  }
+  .muneco {
+    display: none;
+  }
+  .left_botones {
+    justify-content: center;
+  }
+  .btn_incriptar,
+  .btn_desincriptar {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    margin: auto 16px;
+  }
+  .btn_incriptar,
+  .btn_desincriptar {
+    width: 100%;
+  }
+}
